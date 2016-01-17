@@ -12,7 +12,7 @@ var server = new WebpackDevServer(webpack(config), {
     colors: true
   },
   setup: function (app) {
-    app.use(openInEditor())
+    app.use(openInEditor({editor: 'sublime'}))
   }
 });
 var port = process.env.PORT || 3000;
